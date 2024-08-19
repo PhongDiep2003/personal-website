@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className='nav' >
       
-      <Link href={"https://drive.google.com/file/d/1GvAgsvwpXqWD5Dq7ySMiunmIUDAyuvqA/view?usp=sharing"} target='_blank'>
+      <Link href={"https://drive.google.com/file/d/1Wp5yIzZZDSYlgWzd2ulgLvxOBoi3UXpF/view?usp=sharing"} target='_blank'>
         <p className='text-2xl font-serif cursor-pointer  font-medium '>resume</p>
       </Link>
 
