@@ -11,13 +11,13 @@ const page = () => {
 
         {/* Price Comparison */}
           <div className='lg:col-span-2  border-2 border-gray-100 shadow-lg ease-in-out duration-150 hover:scale-x-105 h-[35rem] '>
-            <Link href={"https://github.com/PhongDiep2003/Price-Comparison"} target='_blank'>
+            <Link href={"https://j5price-comparison-eta.vercel.app"} target='_blank'>
               <ProjectCard image='/price_comparison.png' title='Price Comparison' description="My application streamlines the process of price comparison across multiple e-commerce platforms. Users simply enter the Amazon URL of the product they are interested in, and our app quickly scans other major e-commerce sites such as eBay to find that exact product's price. This enables users to make informed purchasing decisions, ensuring they get the best deal without the hassle of manual comparison."/>
             </Link>
           </div>
     
         {/* Resume Parser */}
-        <Link href={"https://github.com/PhongDiep2003/Resume-Parser"} target='_blank'>
+        <Link href={"https://j5resume-parser-sage-alpha.vercel.app"} target='_blank'>
           <div className='border-gray-100 shadow-lg  ease-in-out duration-150 hover:scale-x-105 h-[40rem] bg-[#BEDDEF] hover:bg-white '>
               <ProjectCard image='/resume_parser.jpg' title='Resume Parser' description='My resume parser application streamlines the recruitment process for HR departments by filtering through large volumes of resumes to identify the best matches based on specified keywords. The application analyzes each resume, extracts relevant information, and compares with the specified keywords. The results are then presented in a PDF format, with all the matching keywords prominently highlighted, making it easier for HR professionals to identify the most suitable candidates quickly and efficiently.' />
           </div>

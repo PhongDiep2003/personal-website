@@ -6,9 +6,10 @@ const NavBar = () => {
   const currentPath = usePathname()
   return (
     <div className='nav' >
-
-      <p className='text-2xl font-serif cursor-pointer  font-medium '>resume</p>
-
+      
+      <Link href={"https://drive.google.com/file/d/1GvAgsvwpXqWD5Dq7ySMiunmIUDAyuvqA/view?usp=sharing"} target='_blank'>
+        <p className='text-2xl font-serif cursor-pointer  font-medium '>resume</p>
+      </Link>
 
       <Link href={"/work"}>
         <p className= {currentPath == '/work' ? 'text-2xl font-serif cursor-pointer  font-medium line-through ' : 'text-2xl font-serif cursor-pointer  font-medium '}>work</p>
