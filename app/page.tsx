@@ -1,6 +1,18 @@
+'use client'
 import ExperienceNode from "../components/ExperienceNode";
 import HeroCarousel from "@/components/HeroCarousel";
+import useIsVisible from '../hooks/useIsVisible'
+import { useRef } from "react";
 export default function Home() {
+  const ref1 = useRef(null)
+  const isVisible1 = useIsVisible(ref1)
+
+  const ref2 = useRef(null)
+  const isVisible2 = useIsVisible(ref2)
+
+  const ref3 = useRef(null)
+  const isVisible3 = useIsVisible(ref3)
+
   const experiences = [
     {
       company: "The Software and Computer Engineering Society",
@@ -25,7 +37,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* Intro */}
-      <div className="lg:w-[50%] w-full border-r-8 border-b-8 border-gray-200 border-solid py-10 gap-10 flex flex-col">
+      <div className={`lg:w-[50%] w-full border-r-8 border-b-8 border-gray-200 border-solid py-10 gap-10 flex flex-col transition-opacity ease-in duration-700 delay-300 ${isVisible1 ? "opacity-100" : "opacity-0"}`} ref={ref1}>
         <p className="info-text">Hi there,</p>
         <p className="info-text">I'm Phong. I'm passionate about developing websites and leveraging artificial intelligence to automate tedious repetitive, and boring human work.</p>
         <p className="info-text"> Currently, I am an enrolled software engineering full-time student at <span className="text-[#E5A823] font-bold">San Jose State University</span>.</p>
@@ -35,20 +47,20 @@ export default function Home() {
       </div>
 
       {/* Experience */}
-      <div className="w-full flex flex-col items-end pt-10">
-          <p className="font-serif text-3xl">Experience</p>
-          {/* Verical Timeline*/}
-          <div className="flex flex-col items-center w-full mt-14">
-            {experiences.map((experience, index) => (
-              <ExperienceNode key={index} company={experience.company} image={experience.image} duration={experience.duration} role={experience.role}/>
-            ))}
-          </div>
+      <div className={`w-full flex flex-col items-end pt-10 transition-opacity ease-in duration-700 delay-300 ${isVisible2 ? "opacity-100" : "opacity-0"}`} ref={ref2}>
+        <p className="font-serif text-3xl">Experience</p>
+        {/* Verical Timeline*/}
+        <div className="flex flex-col items-center w-full mt-14">
+          {experiences.map((experience, index) => (
+            <ExperienceNode key={index} company={experience.company} image={experience.image} duration={experience.duration} role={experience.role} />
+          ))}
+        </div>
       </div>
-      
+
       {/* Skills */}
-      <div className="w-full flex flex-col items-start pt-10">
-          <p className="font-serif text-3xl">Skills</p>
-          <HeroCarousel/>
+      <div className={`w-full flex flex-col items-start pt-10 transition-opacity ease-in duration-700 delay-300 ${isVisible3 ? "opacity-100" : "opacity-0"} `} ref={ref3}>
+        <p className="font-serif text-3xl">Skills</p>
+        <HeroCarousel />
       </div>
     </div>
   );
